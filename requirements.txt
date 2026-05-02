@@ -1,0 +1,19 @@
+# Python 3.11, 3.12, or 3.13 required — TensorFlow does not support Python 3.14
+#
+# Setup:
+#   conda create -n perch_env python=3.11 -y
+#   conda activate perch_env
+#   pip install -r requirements.txt
+#
+# For GPU support, replace the tensorflow line below with:
+#   tensorflow[and-cuda]>=2.20,<3.0
+
+# Core — installs etils, ml-collections, librosa, kagglehub, usearch, etc.
+perch-hoplite @ git+https://github.com/google-research/perch-hoplite.git
+
+# TensorFlow (CPU)
+tensorflow>=2.20,<3.0
+
+# Used directly in the notebook
+pandas>=2.0,<3.0
+numpy>=1.24
